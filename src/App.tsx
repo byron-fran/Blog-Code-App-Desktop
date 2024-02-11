@@ -1,10 +1,21 @@
-import React from "react"
-const App = () => {
-    return (
-        <div>
-            <h1>Hola desde elecrton</h1>
-        </div>
-    )
+import './App.css'
+import Page from './components/Page'
+import {Routes, Route, Link} from 'react-router-dom'
+
+
+function App() {
+
+
+  return (
+    <>
+      <div>
+        <Link to='pagina'>Ir a la pagina 1</Link>
+      </div>
+      <Routes>
+        <Route path='/pagina' element={<Page/>}/>
+      </Routes>
+    </>
+  )
 }
 
 export default App
